@@ -95,7 +95,7 @@ module.exports =
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar config = __webpack_require__(/*! ./src/config */ \"./src/config/index.js\");\nvar chalk = __webpack_require__(/*! chalk */ \"chalk\");\n\n// Load mongoose and models\n__webpack_require__(/*! ./src/core/mongoose */ \"./src/core/mongoose.js\");\n\n// Load express\nvar app = __webpack_require__(/*! ./src/core/express */ \"./src/core/express.js\");\n\napp.listen(config.server.port, function () {\n  return console.log(chalk.blue('\\n[*]Groom server is running at ' + config.server.host + ':' + config.server.port + '\\n'));\n});\n\n// global.app = app;\n\n//# sourceURL=webpack:///./index.js?");
+eval("\n\nvar config = __webpack_require__(/*! ./src/config */ \"./src/config/index.js\");\nvar chalk = __webpack_require__(/*! chalk */ \"chalk\");\n\n// Load mongoose and models\n__webpack_require__(/*! ./src/core/mongoose */ \"./src/core/mongoose.js\");\n\n// Load express\nvar app = __webpack_require__(/*! ./src/core/express */ \"./src/core/express.js\");\n\nvar port = process.env.port || config.server.port;\n\napp.listen(port, function () {\n  return console.log(chalk.blue('\\n[*]Groom server is running at ' + config.server.host + ':' + config.server.port + '\\n'));\n});\n\n// global.app = app;\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -442,7 +442,7 @@ eval("\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.app
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! babel-polyfill */\"babel-polyfill\");\nmodule.exports = __webpack_require__(/*! E:\\Projects\\7_Groom\\Groom\\server\\index.js */\"./index.js\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_./index.js?");
+eval("__webpack_require__(/*! babel-polyfill */\"babel-polyfill\");\nmodule.exports = __webpack_require__(/*! E:\\Projects\\7_Groom\\groom-server\\index.js */\"./index.js\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_./index.js?");
 
 /***/ }),
 
